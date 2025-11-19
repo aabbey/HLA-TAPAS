@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hla-tapas"
+version = "0.1.0"
+description = "HLA-TAPAS pipeline for HLA association and fine-mapping studies"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"} 
+dependencies = [
+    "pandas",
+    "scipy",
+    "numpy"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]  # Scans the root folder for packages like SNP2HLA, NomenCleaner
+
+# This creates a shortcut command so you can type 'SNP2HLA' directly in the terminal
+[project.scripts]
+SNP2HLA = "SNP2HLA.__main__:main"
+NomenCleaner = "NomenCleaner.__main__:main"
+MakeReference = "MakeReference.__main__:main"
+HLAassoc = "HLAassoc.__main__:main"

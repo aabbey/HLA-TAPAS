@@ -5,9 +5,7 @@
 import argparse, textwrap
 from SNP2HLA.SNP2HLA import SNP2HLA
 
-
-
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(prog='SNP2HLA',
                                      formatter_class=argparse.RawTextHelpFormatter,
                                      add_help=False,
@@ -26,7 +24,7 @@ if __name__ == "__main__":
                 + Recoded to Python and updated by Wanson Choi(wansonchoi@snu.ac.kr) : 2019/02/06, 2020/04/30
 
 
-        DESCRIPTION: This script runs imputation of HLA amino acids and classical alleles using SNP data.        
+        DESCRIPTION: This script runs imputation of HLA amino acids and classical alleles using SNP data.
 
         INPUTS:
         1. Plink dataset (*.bed/bim/fam)
@@ -36,7 +34,7 @@ if __name__ == "__main__":
         1. PLINK (v1.9)  (Will not work with older Plink 1.07)
         2. Beagle (v4.1) (Need to rename java executable as 'beagle.jar')
         3. vcf2gprobs.jar (Beagle utility for generating a Beagle v3 genotypes probability file from a Beagle 4.1 vcf file with GT field data)
-        4. [Optional] If genetic_map_file argument is specified, PLINK format genetic map on cM scale 
+        4. [Optional] If genetic_map_file argument is specified, PLINK format genetic map on cM scale
             (plink.chr6.GRCh36.map, downloaded from http://bochet.gcc.biostat.washington.edu/beagle/genetic_maps/)
 
 
@@ -69,3 +67,5 @@ if __name__ == "__main__":
     SNP2HLA(args.target, args.reference, args.out, _mem=args.mem, _tolerated_diff=args.tolerated_diff,
             _p_dependency=args.dependency, _b_nthreads=args.nthreads, _b_niterations=args.niterations)
 
+if __name__ == "__main__":
+    main()
