@@ -24,3 +24,6 @@ SNP2HLA = "SNP2HLA.__main__:main"
 NomenCleaner = "NomenCleaner.__main__:main"
 MakeReference = "MakeReference.__main__:main"
 HLAassoc = "HLAassoc.__main__:main"
+
+[tool.setuptools.package-data]
+"SNP2HLA" = ["src/*.pl", "src/*.csh", "src/*"]

@@ -1,0 +1,5 @@
+[console_scripts]
+HLAassoc = HLAassoc.__main__:main
+MakeReference = MakeReference.__main__:main
+NomenCleaner = NomenCleaner.__main__:main
+SNP2HLA = SNP2HLA.__main__:main

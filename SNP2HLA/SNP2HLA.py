@@ -68,7 +68,15 @@ def SNP2HLA(_target, _reference, _out, _mem="2g", _tolerated_diff=.15, _p_depend
     #_beagle2linkage = os.path.join(_dependency, "beagle2linkage.jar")
     _vcf2gprobs = os.path.join(_p_dependency, "vcf2gprobs.jar")
     _perl = which('perl')
-    _merge_table = os.path.join("SNP2HLA/src/merge_tables.pl")
+    
+    # --- FIX START ---
+    # Get the directory where this script file currently lives
+    _pkg_dir = os.path.dirname(os.path.abspath(__file__))
+    # Build the path to src/merge_tables.pl relative to this script
+    _merge_table = os.path.join(_pkg_dir, "src", "merge_tables.pl")
+    # --- FIX END ---
+    # OLD LINE WAS: _merge_table = os.path.join("SNP2HLA/src/merge_tables.pl")
+    
     # _csh = which('csh') if bool(which('csh')) else which('tcsh')
     # _parse_dosage = os.path.join("SNP2HLA/src/ParseDosage.csh")
 

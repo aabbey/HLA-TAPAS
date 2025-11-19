@@ -1,0 +1,12 @@
+HLAManhattan
+HLAassoc
+MakeReference
+MyManhattan
+Myassoc
+NomenCleaner
+SNP2HLA
+dependency
+example
+manuscript
+resources
+venv
